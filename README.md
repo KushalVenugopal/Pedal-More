@@ -11,5 +11,6 @@ This was done using the following stack:
 - PHP
 - HTML
 - CSS
-- JavaScript
+- Vanilla JavaScript
+- jQuery
 - MySQL (phpMyAdmin)
