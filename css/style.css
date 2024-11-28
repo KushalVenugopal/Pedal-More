@@ -1,0 +1,965 @@
+* {
+    border: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    background-color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2em;
+}
+
+header figure {
+    width: 25%;
+}
+
+header figure a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 7vh;
+    background-image: url("../images/pedal_more_logo.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+/* 
+header figure img {
+    width: 60%;
+} */
+
+header nav {
+    width: 80%;
+    position: relative;
+}
+
+header nav ul {
+    position: absolute;
+    width: 60%;
+    right: 5%;
+    display: flex;
+    justify-content: space-between;
+
+    width: 70%;
+    
+}
+
+header nav ul li {
+    list-style: none;
+}
+
+header nav a {
+    text-decoration: none;
+    color: black;
+    padding: 1em;
+    border-radius: 20px;
+    transition: all 0.5s ease;
+}
+
+header nav a:hover{
+    color: white;
+    background-color: black;
+    
+}
+
+/* Footer styling */
+footer{
+    /* background-color: rgb(52,160,164, 0.5); */
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+    margin-top: 10vh;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    height: 20vh;
+    position: relative;
+}
+
+footer p{
+    margin: 1em;
+    font-size: 1em;
+    color: black;
+}
+
+footer p span{
+    font-weight: bold;
+}
+
+
+.enquiry-msg{
+    width: 100%;
+    border-radius: 20px;
+    position: relative;
+    height: 60%;
+}
+
+.enquiry-msg p {
+    width: 40%;
+}
+
+.links {
+    position: absolute;
+    left: 35%;
+    top: 10%;
+    width: 30%;
+    height: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.links a{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 0.8em;
+    color: black;
+
+    border-radius: 20px;
+    transition: all 0.5s ease;
+}
+
+.links a:hover{
+    color: white;
+    background-color: black;
+}
+
+
+/* Styling and arranging the social media buttons in the footer */
+
+#social {
+    position: absolute;
+    width: 20%;
+    height: 50%;
+    right: 5%;
+    top: 35%;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* index.php styling**************************************************************************************************************************** */
+
+#intro-main-box {
+    height: 90vh;
+    position: relative;
+}
+
+#intro-texts {
+    width: 38%;
+    height: 80%;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    
+}
+
+#intro-texts h1 {
+    font-size: 4.5em;
+    font-family: 'Outfit', sans-serif;
+    position: absolute;
+    width: 60%;
+    height: 30%;
+    left: 10%;
+    top: 5%;
+}
+
+#intro-texts p {
+    font-size: 1em;
+
+    position: absolute;
+    width: 80%;
+    top: 45%;
+    left: 10%;
+
+
+}
+
+#intro-texts a {
+    text-decoration: none;
+    font-size: 1.2em;
+    position: absolute;
+    top: 80%;
+    left: 10%;
+    width: 30%;
+    height: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: black;
+    padding: 0.5em;
+    border-radius: 20px;
+    box-shadow: 2px 2px 0.5em black;
+    transition: all 0.5s ease;
+}
+
+#intro-texts a:hover{
+    background-color: white;
+    color: black;
+    transform: scale(1.1);
+}
+
+#intro-texts a:active{
+    transform: scale(0.9);
+}
+
+#intro-video-box {
+    width: 50%;
+    height: 80%;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    overflow: hidden;
+}
+
+#intro-video {
+    width: 100%;
+    height: 100%;
+}
+
+/* Home page dashboard styling */
+
+#dashboard {
+    margin-top: 3em;
+    height: 95vh;
+    position: relative;
+    transition: all 0.5s ease;
+}
+
+#dash-description  {
+    height: 25%;
+    width: 80%;
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 2px dashed black;
+}
+
+#dash-description h1 {
+    font-size: 3em;
+}
+
+#dash-description p {
+    text-align: center;
+    width: 80%;
+    font-size: 1.2em;
+}
+
+/* Promotions Flip Card */
+
+#dash-promo {
+    width: 25%;
+    height: 55%;
+    position: absolute;
+    top: 40%;
+    left: 5%;
+
+    /* Idea for flip card styling, taken from https://www.w3schools.com/howto/howto_css_flip_card.asp */
+    perspective: 1000px;
+}
+
+#dash-promo-inner {
+    width: 99%;
+    height: 100%;
+    border-radius: 20px;
+
+    /* Idea for flip card styling, taken from https://www.w3schools.com/howto/howto_css_flip_card.asp */
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 1s ease;
+}
+
+#dash-promo:hover #dash-promo-inner {
+    transform: rotateY(180deg);
+}
+
+#promo-flip-front {
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    font-size: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background-image: url("../images/promotions.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: 2px 2px 0.2em black;
+
+    /* Idea for flip card styling, taken from https://www.w3schools.com/howto/howto_css_flip_card.asp */
+    position: absolute;
+    backface-visibility: hidden;
+
+    
+}
+
+#promo-flip-front p {
+    padding: 0.2em;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.342);
+    color: white;
+}
+
+#promo-flip-back {
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    color: black;
+    box-shadow: 5px 5px 1em black;
+
+    /* Idea for flip card styling, taken from https://www.w3schools.com/howto/howto_css_flip_card.asp */
+    position: absolute;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+
+#promo-flip-back h1 {
+    font-size: 2em;
+    position: absolute;
+    width: 90%;
+    height: 20%;
+    top: 5%;
+    left: 10%;
+}
+
+#promo-flip-back p:first-of-type{
+    font-size: 1.3em;
+    width: 80%;
+    height: 30%;
+    position: absolute;
+    top: 30%;
+    left: 10%;
+}
+
+#promo-flip-back p:last-of-type{
+    font-size: 1.3em;
+    width: 80%;
+    height: 20%;
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+}
+
+/* Daily Challenge Flip Card */
+
+#dash-challenge {
+    width: 25%;
+    height: 55%;
+    position: absolute;
+    top: 40%;
+    left: 37.5%;
+
+    /* Idea for flip card styling, taken from https://www.w3schools.com/howto/howto_css_flip_card.asp */
+    perspective: 1000px;
+}
+
+#dash-challenge-inner {
+    width: 99%;
+    height: 100%;
+    border-radius: 20px;
+
+    /* Idea for flip card styling, taken from https://www.w3schools.com/howto/howto_css_flip_card.asp */
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 1s ease;
+}
+
+#dash-challenge:hover #dash-challenge-inner {
+    transform: rotateY(180deg);
+}
+
+#challenge-flip-front {
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    font-size: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background-image: url("../images/challenge.jpg");
+    background-size: cover;
+    
+    box-shadow: 2px 2px 0.2em black;
+
+    /* Idea for flip card styling, taken from https://www.w3schools.com/howto/howto_css_flip_card.asp */
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+#challenge-flip-front p {
+    padding: 0.2em;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.342);
+    color: white;
+}
+
+#challenge-flip-back {
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    color: black;
+    box-shadow: 5px 5px 1em black;
+
+    /* Idea for flip card styling, taken from https://www.w3schools.com/howto/howto_css_flip_card.asp */
+    position: absolute;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+
+#challenge-flip-back h1 {
+    font-size: 2em;
+    position: absolute;
+    width: 90%;
+    height: 20%;
+    top: 5%;
+    left: 10%;
+}
+
+#challenge-flip-back p:first-of-type{
+    font-size: 1.3em;
+    width: 80%;
+    height: 30%;
+    position: absolute;
+    top: 30%;
+    left: 10%;
+}
+
+#challenge-flip-back p:last-of-type{
+    font-size: 1.3em;
+    width: 80%;
+    height: 20%;
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+}
+
+/* Community Flip Card */
+
+#dash-community {
+    width: 25%;
+    height: 55%;
+    position: absolute;
+    top: 40%;
+    right: 5%;
+
+    /* Idea for flip card styling, taken from https://www.w3schools.com/howto/howto_css_flip_card.asp */
+    perspective: 1000px;
+}
+
+#dash-community-inner {
+    width: 99%;
+    height: 100%;
+    border-radius: 20px;
+
+    /* Idea for flip card styling, taken from https://www.w3schools.com/howto/howto_css_flip_card.asp */
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 1s ease;
+}
+
+#dash-community:hover #dash-community-inner {
+    transform: rotateY(180deg);
+}
+
+#community-flip-front {
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    font-size: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background-image: url("../images/community.jpg");
+    background-size: cover;
+
+    box-shadow: 2px 2px 0.2em black;
+
+    /* Idea for flip card styling, taken from https://www.w3schools.com/howto/howto_css_flip_card.asp */
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+#community-flip-front p {
+    padding: 0.2em;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.342);
+    color: white;
+}
+
+#community-flip-back {
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    color: black;
+    box-shadow: 5px 5px 1em black;
+
+    /* Idea for flip card styling, taken from https://www.w3schools.com/howto/howto_css_flip_card.asp */
+    position: absolute;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+
+#community-flip-back h1 {
+    font-size: 2em;
+    position: absolute;
+    width: 90%;
+    height: 20%;
+    top: 5%;
+    left: 17.5%;
+}
+
+#community-flip-back p:first-of-type{
+    font-size: 1.3em;
+    width: 80%;
+    height: 30%;
+    position: absolute;
+    top: 25%;
+    left: 10%;
+}
+
+#community-flip-back p:last-of-type{
+    font-size: 1.3em;
+    width: 80%;
+    height: 20%;
+    position: absolute;
+    bottom: 7.5%;
+    left: 10%;
+}
+
+#dash-home-button {
+    text-decoration: none;
+    position: absolute;
+    top: 10%;
+    left: 7.5%;
+    width: 5%;
+    text-align: center;
+    padding: 1em;
+    color: black;
+    border-radius: 20px;
+    box-shadow: 2px 2px 0.5em black;
+    transition: all 0.5s ease;
+}
+
+#dash-home-button:hover{
+    color: white;
+    background-color: black;
+    transform: scale(1.1);
+}
+
+#dash-home-button:active{
+    transform: scale(0.9);
+}
+
+
+/* new_promotions.php styling******************************************************************************************************************* */
+
+#promo-main-box {
+    height: 85vh;
+    position: relative;
+}
+
+#promo-deets {
+    width: 25%;
+    height: 75%;
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    overflow: auto;
+    padding: 1em;
+    transition: all 1s ease;
+    scroll-behavior: smooth;
+}
+
+.each-promo-details {
+    border: 1px solid black;
+    margin-top: 2em;
+    padding: 1em;
+    border-radius: 20px;
+    box-shadow: 2px 2px 0.3em black;
+}
+
+#show-promos {
+    color: black;
+    text-decoration: none;
+    width: 80%;
+    height: 30%;
+    font-size: 2em;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 2px 2px 0.3em black;
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+
+#show-promos:hover {
+    transform: scale(1.1);
+    background-color: rgb(241, 219, 246);
+}
+
+#promo-map-box {
+    width: 60%;
+    height: 80%;
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    overflow: hidden;
+    transition: all 3s ease;
+    border-radius: 25px;
+    box-shadow: 5px 5px 1em black;
+}
+
+#show-promos.hide {
+    display: none;
+    visibility: hidden;
+}
+
+#promo-inner.hide {
+    display: none;
+    visibility: hidden;
+}
+
+#promo-inner.show {
+    display: block;
+    visibility: visible;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 99%;
+    height: 99%;
+    border: 2px solid red;
+}
+
+/* community.php styling************************************************************************************************************************ */
+
+#community-main-box {
+    margin-top: 1em;
+    height: 85vh;
+    position: relative;
+}
+
+#user-input {
+    width: 40%;
+    height: 80%;
+    position: absolute;
+    top: 20%;
+    left: 2%;
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+    border-radius: 20px;
+}
+
+#user-posts {
+    width: 53%;
+    height: 80%;
+    position: absolute;
+    top: 15%;
+    right: 3%;
+    overflow: auto;
+}
+
+#each-post {
+    border: 1px solid black;
+    margin: 2em;
+    padding: 1em;
+    border-radius: 20px;
+    box-shadow: 2px 2px 0.3em black;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#community-form-section {
+    position: absolute;
+    width: 100%;
+    height: 85%;
+}
+
+#community-form {
+    position: absolute;
+    width: 90%;
+    height: 100%;
+    left: 5%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#community-form input[type=text] {
+    width: 60%;
+    border-radius: 5px;
+}
+
+#community-form label {
+    font-size: 1.2em;
+}
+
+#postBody {
+    width: 80%;
+    height: 20%;
+    border-radius: 5px;
+}
+
+#submitButton[type=submit] {
+    background-color: white;
+    width: 60%;
+    height: 10%;
+    border-radius: 20px;
+    box-shadow: 2px 2px 0.5em black;
+    transition: all 0.5s ease;
+}
+
+#submitButton:hover{
+    color: white;
+    background-color: black;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#submitButton:active{
+    transform: scale(1);
+}
+
+#submit-success {
+    position: absolute;
+    width: 60%;
+    height: 10%;
+    left: 20%;
+    bottom: 0;
+    text-align: center;
+}
+
+#all-posts-label {
+    position: absolute;
+    width: 35%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 13%;
+    top: 2%;
+    font-size: 2.5em;
+    border-bottom: 2px dashed black;
+}
+
+#new-post-label {
+    position: absolute;
+    width: 36%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 2%;
+    top: 2%;
+    font-size: 2.5em;
+    border-bottom: 2px dashed black;
+}
+
+/* daily_challenge.php styling****************************************************************************************************************** */
+
+#daily-main-box {
+    height: 90vh;
+    position: relative;
+}
+
+#daily-message {
+    width: 40%;
+    height: 60%;
+    position: absolute;
+    top: 15%;
+    left: 5%;
+}
+
+#daily-message h1 {
+    font-size: 3em;
+    height: 15%;
+    position: absolute;
+    top: 5%;
+    left: 8%;
+}
+
+#daily-message h3 {
+    font-size: 1.2em;
+    height: 10%;
+    position: absolute;
+    top: 25%;
+    left: 7.5%;
+}
+
+#daily-message p {
+    font-size: 1.2em;
+    margin: 1em;
+    height: 35%;
+    position: absolute;
+    top: 40%;
+    left: 5%;
+}
+
+
+
+#generate {
+    width: 30%;
+    height: 40%;
+    position: absolute;
+    top: 20%;
+    right: 8%;
+}
+
+#generate-button {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 2em;
+    border-radius: 20px;
+    box-shadow: 2px 2px 0.3em black;
+    color: black;
+    transition: all 0.5s ease;
+}
+
+#generate-button:hover {
+    transform: scale(1.1);
+    background-color: rgb(241, 219, 246);
+}
+
+
+#the-challenge {
+    background-color: white;
+    width: 70%;
+    height: 80%;
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    border-radius: 25px;
+    box-shadow: 5px 5px 1em black;
+    display: none;
+    visibility: hidden;
+}
+
+#the-challenge.show {
+    display: block;
+    visibility: visible;
+}
+
+#challenge-map {
+    width: 55%;
+    height: 90%;    
+    position: absolute;
+    top: 5%;
+    left: 2%;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+#challenge-desc {
+    width: 35%;
+    height: 60%;    
+    position: absolute;
+    top: 5%;
+    right: 5%;
+}
+
+.each-challenge {
+    margin: 2em;
+    padding: 1em;
+    border-radius: 20px;
+    box-shadow: 2px 2px 0.5em black;
+
+    position: absolute;
+    width: 75%;
+    height: 75%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.each-challenge h1 {
+    font-size: 2.1em;
+    border-bottom: 2px dashed black;
+}
+
+.each-challenge h2 {
+    font-size: 1.2em;
+}
+
+.each-challenge p {
+    display: none;
+    visibility: hidden;
+}
+
+#share {
+    width: 35%;
+    height: 20%;
+    position: absolute;
+    right: 5%;
+    top: 70%;
+    font-size: 1.3em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+
+    border-radius: 20px;
+    box-shadow: 2px 2px 0.5em black;
+    transition: all 0.5s ease;
+}
+
+#share:hover{
+    background-color: rgb(241, 219, 246);
+    transform: scale(1.1);
+}
+
+#share:active{
+    transform: scale(1);
+}
+
+#share:visited{
+    color: black;
+}
+
+#share.posted {
+    background-color: lightgreen;
+}
+
+
